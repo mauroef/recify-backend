@@ -19,7 +19,8 @@ class Band {
 	
 		// select all query
 		$query = "SELECT id, name 
-							FROM " . $this->table_name;
+							FROM " . $this->table_name . 
+							" ORDER BY id DESC";
 
 		// prepare query statement
 		$stmt = $this->conn->prepare($query);

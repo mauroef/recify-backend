@@ -19,7 +19,8 @@ class Recital {
     $query = "SELECT r.id, r.date, b.name AS 'band', p.name AS 'place', r.ticket
               FROM " . $this->table_name . " r 
               JOIN band b ON r.id_band = b.id
-              JOIN place p ON r.id_place = p.id";    
+              JOIN place p ON r.id_place = p.id
+              ORDER by id DESC";    
 
 		$stmt = $this->conn->prepare($query);
 

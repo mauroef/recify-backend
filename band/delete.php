@@ -22,11 +22,9 @@ $data = json_decode(file_get_contents("php://input"));
  
 // set band id to be deleted
 $band->id = $data->id;
- 
-$lastId = $band->delete();
 
 // delete the band
-if($lastId > 0) {
+if($band->delete()) {
  
     // set response code - 200 ok
     http_response_code(200);

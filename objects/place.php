@@ -14,7 +14,8 @@ class Place {
 	function read() {
 	
 		$query = "SELECT id, name 
-							FROM " . $this->table_name;
+							FROM " . $this->table_name . 
+							" ORDER BY id DESC";
 
 		$stmt = $this->conn->prepare($query);
 
