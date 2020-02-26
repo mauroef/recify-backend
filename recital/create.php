@@ -17,8 +17,7 @@ $recital = new Recital($db);
  
 $data = json_decode(file_get_contents("php://input"));
  
-if (!empty($data->date) && !empty($data->ticket) &&
-		!empty($data->id_band) && !empty($data->id_place)) {
+if (!empty($data->date) && !empty($data->id_band) && !empty($data->id_place)) {
  
 	$recital->date = $data->date;
 	$recital->ticket = $data->ticket;
